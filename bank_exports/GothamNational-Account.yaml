@@ -1,0 +1,105 @@
+csv:
+  amount_in: 7
+  amount_out: 7
+  currency: "EUR"
+  date: 0
+  date_layout_in: "02.01.2006"  # TODO : add comment here about being a go date format string
+  date_layout_out: "2006-01-02"
+  default_account: "Expenses:Unknown"  # The default account for transactions if no rule matches
+  description: 4
+  fields: 0  # Validate no. of fields; -1 is no check, 0 is infer from first row, and > 0 is explicit length
+  payee: 2
+  processing_account: "Assets:GothamNational:Account"  # The account this export/CSV pertains to
+  separator: ;
+  skip: 9
+transactions_rules:
+  ACME:
+    set_account: "Income:AcmeCorp:Salary"
+    set_comment: "Salary paid from Acme Corp"
+    match_description: ""
+    match_payee: "ACME CORP"
+  TRANSPORT_PUBLIC:
+    set_account: "Expenses:Transport:Public"
+    set_comment: "Transportation Public"
+    match_description: "MTA"
+    match_payee: "MTA"
+  TRANSPORT_TAXIS:
+    set_account: "Expenses:Transport:Taxis"
+    set_comment: "Transportation Taxis"
+    match_description: ""
+    match_payee: "UBER BV"
+  TRANSPORT_CARSHARE:
+    set_account: "Expenses:Transport:CarShare"
+    set_comment: "Transportation Car Sharing"
+    match_description: ""
+    match_payee: "VISA C2G|CAR2GO|DRIVENOW"
+  BOOKS:
+    set_account: "Expenses:Leisure:Books"
+    set_comment: "Books"
+    match_description: ""
+    match_payee: "KINDLE SVCS"
+  FOOD:
+    set_account: "Expenses:FoodDrinks:Meals"
+    set_comment: "Meals"
+    match_description: ""
+    match_payee: "TAKEAWAYCOM|SUBWAY|PHO2000|BLOCK HOUSE|COFFEE HOUSE|VISA MCDONALD"
+  GROCERIES:
+    set_account: "Expenses:FoodDrinks:Groceries"
+    set_comment: "Groceries"
+    match_description: "description to match on, can be a regex"
+    match_payee: "REWE MARKT|VISA DM-DROGERIE"
+  PHONE:
+    set_account: "Expenses:Utilities:Phone"
+    set_comment: "Phone"
+    match_description: "description to match on, can be a regex"
+    match_payee: "Vodafone"
+  LIFEINS:
+    set_account: "Expenses:Insurance:Life"
+    set_comment: "Life Insurance"
+    match_description: "description to match on, can be a regex"
+    match_payee: "LIFE INS"
+  MUSIC:
+    set_account: "Expenses:Leisure:Music"
+    set_comment: "Music Streaming Subscription"
+    match_description: "description to match on, can be a regex"
+    match_payee: "GOOGLE*MUSIC"
+  TRANSFERWISE:
+    set_account: "Assets:TransferWise:EUR"
+    set_comment: "TransferWise Money Transfer"
+    match_description: ""
+    match_payee: "Transferwise Ltd|TransferWise"
+  TRANSFER_IRONBANK:
+    set_account: "Assets:IronBank:Account"
+    set_comment: "Transferring Money"
+    match_description: "IronBank account|Transfer to my IronBank account"
+    match_payee: ""
+  FITNESS:
+    set_account: "Expenses:Personal:Gym"
+    set_comment: ""
+    match_description: "description to match on, can be a regex"
+    match_payee: "Fitness First Germany GmbH|FITNESS FIRST GERMANY GMBH"
+  AMAZON:
+    set_account: "Expenses:Personal:Amazon"
+    set_comment: "Amazon Purchase"
+    match_description: "description to match on, can be a regex"
+    match_payee: "VISA AMZ|VISA AMAZON|AMZN MKTP DE|AMZNDIGITAL|AMZ*AMAZON.DE|AMAZON"
+  GAMING:
+    set_account: "Expenses:Leisure:Gaming"
+    set_comment: ""
+    match_description: "description to match on, can be a regex"
+    match_payee: "VISA MICROSOFT*XBOX"
+  MOVIES:
+    set_account: "Expenses:Leisure:Movies"
+    set_comment: ""
+    match_description: "GREATER UNION"
+    match_payee: "CINESTAR"
+  CLOTHING:
+    set_account: "Expenses:Personal:Clothing"
+    set_comment: ""
+    match_description: ""
+    match_payee: "UNIQLO|ZALANDO"
+  TRAVEL:
+    set_account: "Expenses:Leisure:Travel"
+    set_comment: ""
+    match_description: ""
+    match_payee: "AIR FRANCE|RYANAIR|EASYJET|CAR RENTAL|AVIS|EUROPCAR|HERTZ"
