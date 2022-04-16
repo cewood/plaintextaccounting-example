@@ -4,3 +4,9 @@
 ; ╠═╣│  │  │ ││ ││││ │ 
 ; ╩ ╩└─┘└─┘└─┘└─┘┘└┘ ┴
 
+;; Import and balance
+include "bank_exports/IronBank-Account_2050-07-01_2050-09-30.bean"
+; since this is the first import, balance the initial balance
+2050-06-30 pad      Assets:IronBank:Account   Equity:Opening-Balances
+2050-07-01 balance  Assets:IronBank:Account   1234.53 EUR
+2050-10-01 balance  Assets:IronBank:Account    476.05 EUR
