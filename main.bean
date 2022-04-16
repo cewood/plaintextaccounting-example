@@ -1,0 +1,98 @@
+; ooooo                        .o8                                
+; `888'                       "888                                
+;  888          .ooooo.   .oooo888   .oooooooo  .ooooo.  oooo d8b 
+;  888         d88' `88b d88' `888  888' `88b  d88' `88b `888""8P 
+;  888         888ooo888 888   888  888   888  888ooo888  888     
+;  888       o 888    .o 888   888  `88bod8P'  888    .o  888     
+; o888ooooood8 `Y8bod8P' `Y8bod88P" `8oooooo.  `Y8bod8P' d888b    
+;                                   d"     YD                     
+;                                   "Y88888P'
+
+
+
+
+; ╔═╗┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
+; ║ ║├─┘ │ ││ ││││└─┐
+; ╚═╝┴   ┴ ┴└─┘┘└┘└─┘
+
+option "title" "Beancount Finances Ledger"
+option "operating_currency" "EUR"
+option "operating_currency" "USD"
+
+
+
+
+; ╔═╗┌─┐┌─┐┌─┐┬ ┬┌┐┌┌┬┐  ╔═╗┌─┐┌─┐┌┐┌┬┌┐┌┌─┐
+; ╠═╣│  │  │ ││ ││││ │   ║ ║├─┘├┤ ││││││││ ┬
+; ╩ ╩└─┘└─┘└─┘└─┘┘└┘ ┴   ╚═╝┴  └─┘┘└┘┴┘└┘└─┘
+
+;;; Declaration of Accounts.
+
+;;; Here you can declare a list of valid accounts, and
+;;; optionally, a constraint on which kind of commodity they are
+;;; allowed to hold (helps you track down mistakes).
+;;;
+;;; Note that
+;;;
+;;; - the system supports any currencies, and works with
+;;;   multiple commodities in the same Ledger.
+;;;
+;;; - No distinction is made between currency commodities (e.g.
+;;;   USD, EUR, USD) and investment commodities (e.g. FB, AMZN,
+;;;   AAPL, MSFT).
+;;;
+;;; - The Assets, Liabilities, Equity, Income, Expenses
+;;;   categories are not special; they are simply a convention;
+;;;   be creative if you like. There are really only two kinds
+;;;   of accounts: debit accounts and credit accounts, and the
+;;;   type is only used for reporting (maybe).
+
+2050-01-01 open Assets:Cash                                           EUR
+2050-01-01 open Assets:GothamNational:Account                         EUR
+2050-01-01 open Assets:IronBank:Account                               EUR
+2050-01-01 open Assets:TransferWise:EUR                               EUR
+
+2050-01-01 open Liabilities:GothamNational:Mortgage:Loan              EUR
+2050-01-01 open Liabilities:Clearings                                 EUR
+
+2050-01-01 open Equity:Opening-Balances
+
+2050-01-01 open Income:Capital-Gains
+2050-01-01 open Income:AcmeCorp:Salary
+2050-01-01 open Income:Other
+
+2050-01-01 open Expenses:Education
+2050-01-01 open Expenses:Financial
+2050-01-01 open Expenses:FoodDrinks:Groceries
+2050-01-01 open Expenses:FoodDrinks:Meals
+2050-01-01 open Expenses:Housing:Rent
+2050-01-01 open Expenses:Insurance
+2050-01-01 open Expenses:Insurance:Life
+2050-01-01 open Expenses:Leisure
+2050-01-01 open Expenses:Leisure:Books
+2050-01-01 open Expenses:Leisure:Gaming
+2050-01-01 open Expenses:Leisure:Movies
+2050-01-01 open Expenses:Leisure:Music
+2050-01-01 open Expenses:Leisure:Travel
+2050-01-01 open Expenses:Medical
+2050-01-01 open Expenses:Personal
+2050-01-01 open Expenses:Personal:Amazon
+2050-01-01 open Expenses:Personal:Clothing
+2050-01-01 open Expenses:Personal:Gym
+2050-01-01 open Expenses:Taxes
+2050-01-01 open Expenses:Transport
+2050-01-01 open Expenses:Transport:CarShare
+2050-01-01 open Expenses:Transport:Public
+2050-01-01 open Expenses:Transport:Taxis
+2050-01-01 open Expenses:Unknown
+2050-01-01 open Expenses:Utilities
+2050-01-01 open Expenses:Utilities:Phone
+
+
+
+
+; ╔═╗┌─┐┌─┐┌─┐┬ ┬┌┐┌┌┬┐  ╦┌┬┐┌─┐┌─┐┬─┐┌┬┐┌─┐
+; ╠═╣│  │  │ ││ ││││ │   ║│││├─┘│ │├┬┘ │ └─┐
+; ╩ ╩└─┘└─┘└─┘└─┘┘└┘ ┴   ╩┴ ┴┴  └─┘┴└─ ┴ └─┘
+
+include "accounts_ironbank.bean"
