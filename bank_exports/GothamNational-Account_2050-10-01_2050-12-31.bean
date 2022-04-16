@@ -81,5 +81,6 @@
 ;; []string{"31.10.2050", "30.10.2050", "IronBank Account", "Gutschrift", "Transfer to my IronBank account", "2.622,94", "EUR", "-456,98", "EUR"}
 2050-10-31 * "IronBank Account" "Transfer to my IronBank account"
   Assets:GothamNational:Account   -456.98 EUR
+  ;Assets:IronBank:Account         456.98 EUR
   Liabilities:Clearings            456.98 EUR
 

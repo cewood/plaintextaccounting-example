@@ -1,6 +1,7 @@
 ;; []string{"2050-10-31", "Maxwell Smart", "DE12343456987654321234", "Income", "Transfer to my IronBank account", "Income", "456.98", "", "", ""}
 2050-10-31 * "Maxwell Smart" "Income"
   Liabilities:Clearings          -456.98 EUR
+  ;Assets:GothamNational:Account -456.98 EUR
   Assets:IronBank:Account         456.98 EUR
 
 ;; []string{"2050-11-11", "90971386700", "", "MasterCard Payment", "", "ATM", "-33.68", "-33.68", "EUR", "1.0"}
