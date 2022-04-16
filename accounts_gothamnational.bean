@@ -1,0 +1,12 @@
+;Assets:GothamNational
+
+; ╔═╗┌─┐┌─┐┌─┐┬ ┬┌┐┌┌┬┐
+; ╠═╣│  │  │ ││ ││││ │ 
+; ╩ ╩└─┘└─┘└─┘└─┘┘└┘ ┴
+
+;; Import and balance
+include "bank_exports/GothamNational-Account_2050-10-01_2050-12-31.bean"
+; since this is the first import, balance the initial balance
+2050-09-28 pad      Assets:GothamNational:Account   Equity:Opening-Balances
+2050-10-01 balance  Assets:GothamNational:Account   3079.92 EUR
+2051-01-01 balance  Assets:GothamNational:Account   4802.28 EUR

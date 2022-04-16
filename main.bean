@@ -95,4 +95,5 @@ option "operating_currency" "USD"
 ; ╠═╣│  │  │ ││ ││││ │   ║│││├─┘│ │├┬┘ │ └─┐
 ; ╩ ╩└─┘└─┘└─┘└─┘┘└┘ ┴   ╩┴ ┴┴  └─┘┴└─ ┴ └─┘
 
+include "accounts_gothamnational.bean"
 include "accounts_ironbank.bean"

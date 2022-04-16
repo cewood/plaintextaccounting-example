@@ -1,0 +1,20 @@
+;; []string{"2050-10-31", "Maxwell Smart", "DE12343456987654321234", "Income", "Transfer to my IronBank account", "Income", "456.98", "", "", ""}
+2050-10-31 * "Maxwell Smart" "Income"
+  Liabilities:Clearings          -456.98 EUR
+  Assets:IronBank:Account         456.98 EUR
+
+;; []string{"2050-11-11", "90971386700", "", "MasterCard Payment", "", "ATM", "-33.68", "-33.68", "EUR", "1.0"}
+2050-11-11 * "90971386700" "MasterCard Payment"
+  Assets:IronBank:Account         -33.68 EUR
+  Expenses:Unknown                 33.68 EUR
+
+;; []string{"2050-12-24", "INFLIGHT SERVICES NORW", "", "MasterCard Payment", "", "Food & Groceries", "-5.05", "-50.0", "NOK", "0.101"}
+2050-12-24 * "INFLIGHT SERVICES NORW" "MasterCard Payment"
+  Assets:IronBank:Account          -5.05 EUR
+  Expenses:Unknown                  5.05 EUR
+
+;; []string{"2050-12-30", "MCDONALD'S", "", "MasterCard Payment", "", "Bars & Restaurants", "-7.5", "-7.5", "EUR", "1.0"}
+2050-12-30 * "MCDONALD'S" "MasterCard Payment"
+  Assets:IronBank:Account           -7.5 EUR
+  Expenses:Unknown                   7.5 EUR
+
