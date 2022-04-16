@@ -1,0 +1,20 @@
+csv:
+  amount_in: 6
+  amount_out: 6
+  currency: "EUR"
+  date: 0
+  date_layout_in: "2006-01-02"  # TODO : add comment here about being a go date format string
+  date_layout_out: "2006-01-02"  # TODO : add same comment as above item
+  default_account: "Expenses:Unknown"  # The default account for transactions if no rule matches
+  description: 3
+  fields: -0  # Validate no. of fields; -1 is no check, 0 is infer from first row, and > 0 is explicit length
+  payee: 1
+  processing_account: "Assets:IronBank:Account"  # The account this export/CSV pertains to
+  separator: ','
+  skip: 1
+transactions_rules:
+  Maxwell Smart:  # This is just a key to identify a rule, it can be anything
+    set_account: "Assets:GothamNational:Account"  # the account to use for the other side of this transaction
+    set_comment: "Transfer from GothamNational"
+    match_description: "description to match on, can be a regex"
+    match_payee: "Maxwell Smart"
